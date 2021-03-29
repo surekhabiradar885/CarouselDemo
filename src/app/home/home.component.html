@@ -1,0 +1,7 @@
+<main>
+  <div class="flex-grid" *ngFor="let i of num">
+    <div class="col-light"></div>
+    <div *ngIf="i < num.length" class="col-dark"></div>
+  </div>
+  <app-slider class="picker"> </app-slider>
+</main>

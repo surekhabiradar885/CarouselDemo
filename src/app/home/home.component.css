@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  position: relative;
+  width: 125%;
+  height: 1000px;
+  margin-left: -10px;
+  flex: 1;
+  justify-content: center;
+  background-color: #f6cdcd;
+}
+.flex-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.flex-grid .col-light {
+  width: 96px;
+  background-color: #e7f5f6;
+}
+.flex-grid .col-dark {
+  width: 24px;
+  background-color: #d6eaec;
+}
+/* .cell-content {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: medium;
+} */
+.picker {
+  position: absolute;
+
+  display: flex;
+  flex-flow: row;
+  overflow: hidden;
+  /*   margin-top: 270px; */
+  width: 100%;
+  height: 70%;
+}
+
+
+/* Responsive Styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .picker {
+    width: 100%;
+    margin-left: 8%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .picker {
+    position: absolute;
+  
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+    /*   margin-top: 270px; */
+    width: 92%;
+    height: 70%;
+   /*  margin-left: 5%; */
+  }
+  main{
+    width:116%;
+  }
+  .flex-grid .col-dark {
+    width: 14px;
+  }
+  .flex-grid .col-light {
+    width: 50px;
+    }
+}
+
+
+

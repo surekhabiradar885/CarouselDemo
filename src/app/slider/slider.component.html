@@ -1,0 +1,17 @@
+<div class="slider-container">
+  <div class="text-div">
+    <p class="what-are-you">What are you</p>
+    <p class="here-to-do">here to do?</p>
+  </div>
+  <div style="display: flex">
+    <ng-container *ngFor="let action of actions; let i = index">
+      <app-carousel *ngIf="i == 2" class="w3-animate-zoom carouselComp" [index]="i" title="{{ action }}">
+      </app-carousel>
+      <app-carousel *ngIf="i != 2" [index]="i" title="{{ action }}"
+        [ngClass]="[sliderFlag ? 'w3-animate-right' : 'w3-animate-left','carouselComp']">
+      </app-carousel> 
+    </ng-container>
+  </div>
+  <img class="prev-slide control" src="./assets/previous3.PNG" (click)="show_image('left')"  (touchstart)="show_image('left')" />
+  <img class="next-slide control" src="./assets/next2.PNG" (click)="show_image('right')"  (touchstart)="show_image('right')"/>
+</div>
