@@ -161,58 +161,6 @@ body {
   transform-origin: center bottom;
 }
 
-.w3-center {
-  text-align: center !important
-}
-
-.w3-animate-right {
-  position: relative;
-  animation: animateright 0.4s
-}
-
-@keyframes animateright {
-  from {
-    right: -30px;
-    opacity: 0
-  }
-
-  to {
-    right: 0;
-    opacity: 1
-  }
-}
-
-.w3-animate-left {
-  position: relative;
-  animation: animateleft 0.4s
-}
-
-@keyframes animateleft {
-  from {
-    left: -300px;
-    opacity: 0
-  }
-
-  to {
-    left: 0;
-    opacity: 1
-  }
-}
-
-.w3-animate-zoom {
-  animation: animatezoom 0.6s
-}
-
-@keyframes animatezoom {
-  from {
-    transform: scale(0)
-  }
-
-  to {
-    transform: scale(1)
-  }
-}
-
 @media only screen and(min-width: 1023px) {}
 
 /* @media only screen and (min-width: 768px) and (max-width: 1023px) {

@@ -135,7 +135,7 @@ export class SliderComponent implements OnInit {
     });
     const tlm = new TimelineMax({ repeat: 1 })
       .to(ele, 1, { x: `+=${this.wrapWidth}`/*, rotationX: -rotationX*/ }, 0)
-      .to(ele, this.cellStep, { color: '#009688', scale: 1, repeat: 1, yoyo: true, borderColor: '#0000ff' }, 0.5 - this.cellStep);
+      .to(ele, this.cellStep, { scale: 1, repeat: 1, yoyo: true, borderBottomColor: '#0000ff' }, 0.5 - this.cellStep);
     this.baseTL.add(tlm, index * -this.cellStep);
   }
 
