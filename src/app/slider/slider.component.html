@@ -3,15 +3,21 @@
     <p class="what-are-you">What are you</p>
     <p class="here-to-do">here to do?</p>
   </div>
-  <div style="display: flex">
+  <div #container class="container">
     <ng-container *ngFor="let action of actions; let i = index">
-      <app-carousel *ngIf="i == 2" class="w3-animate-zoom carouselComp" [index]="i" title="{{ action }}">
-      </app-carousel>
-      <app-carousel *ngIf="i != 2" [index]="i" title="{{ action }}"
+      <div #cell class="cell">
+        <img class="small-box" src="./assets/smallSquare.PNG" />
+        <div class="text">
+          <p style='margin-bottom: -10%;'>{{action}}</p>
+         <!--  <p *ngIf="i==2" class="start-here"> START HERE  > </p> -->
+         <!--  <p style='margin-left: -5px;'>{{newTitleArr[1]}}</p> -->
+      </div>
+    </div>
+      <!-- <app-carousel *ngIf="i != 2" [index]="i" title="{{ action }}"
         [ngClass]="[sliderFlag ? 'w3-animate-right' : 'w3-animate-left','carouselComp']">
-      </app-carousel> 
+      </app-carousel>  -->
     </ng-container>
   </div>
-  <img class="prev-slide control" src="./assets/previous3.PNG" (click)="show_image('left')"  (touchstart)="show_image('left')" />
-  <img class="next-slide control" src="./assets/next2.PNG" (click)="show_image('right')"  (touchstart)="show_image('right')"/>
+  <img #leftArrow class="prev-slide control" src="./assets/previous3.PNG" (click)="animateSlides(-1,$event)"  />
+  <img #rightArrow class="next-slide control" src="./assets/next2.PNG" (click)="animateSlides(1,$event)"/> 
 </div>

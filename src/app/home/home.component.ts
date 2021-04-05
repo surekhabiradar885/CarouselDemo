@@ -7,7 +7,6 @@ import {
   ElementRef,
   AfterViewInit,
 } from '@angular/core';
-import { CarouselComponent } from '../carousel/carousel.component';
 import { SliderComponent } from '../slider/slider.component';
 
 @Component({

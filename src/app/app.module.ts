@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { SliderComponent } from './slider/slider.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CarouselComponent,
     SliderComponent
   ],
   imports: [
