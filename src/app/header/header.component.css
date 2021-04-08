@@ -2,7 +2,7 @@
     height: 80px;
     width: 100%;
     background-color: white;
-    box-shadow: 1px 4px 1px -2px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 5px 1px -2px rgba(150, 150, 150, 0.8);
 }
 
 .container ul {
@@ -33,12 +33,12 @@
 
 .personal-div {
     position: relative;
-    left: 38%;
+    left: 55%;
 }
 
 .container ul .logo {
-    margin-right: 10%;
-    margin-left: -6.5%;
+    margin-right: 12%;
+    margin-left:  -14.5%;
     padding-top: 0;
     position: relative;
     z-index: 1;
@@ -64,7 +64,7 @@
 
 .search {
     position: relative;
-    left: 35%;
+    left: 50%;
 }
 
 .container ul .search img {

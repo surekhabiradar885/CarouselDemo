@@ -3,15 +3,18 @@
     <p class="what-are-you">What are you</p>
     <p class="here-to-do">here to do?</p>
   </div>
+  <div class="current">    
+  </div>
   <div #container class="container">
     <ng-container *ngFor="let action of actions; let i = index">
       <div #cell class="cell">
         <img class="small-box" src="./assets/smallSquare.PNG" />
         <div id="text" class="text">{{action}}
+          <div style='position: absolute;' id="startHere"></div>
         </div>
       </div>
     </ng-container>
   </div>
-  <img #leftArrow class="prev-slide control" src="./assets/previous3.PNG" (click)="animateSlides(-1,$event)" />
-  <img #rightArrow class="next-slide control" src="./assets/next2.PNG" (click)="animateSlides(1,$event)" />
+  <img  class="prev-slide control" src="./assets/previous3.PNG" (click)="animateSlides(-1,$event)" />
+  <img  class="next-slide control" src="./assets/next2.PNG" (click)="animateSlides(1,$event)" />
 </div>

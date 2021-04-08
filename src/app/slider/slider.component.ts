@@ -16,7 +16,7 @@ export class SliderComponent implements OnInit {
     'Upgrade',
   ];
   proxy: Element;
-  cellWidth = 260;
+  cellWidth = 250;
   numCells: number;
   cellStep: number;
   wrapWidth: number;
@@ -27,19 +27,17 @@ export class SliderComponent implements OnInit {
   picker: Element;
   slideAnimation: any;
 
-
-  constructor(private render: Renderer2) { }
   @ViewChild('container', { static: false }) container: ElementRef;
   @ViewChildren('cell') cell: QueryList<ElementRef>;
-  @ViewChildren('leftArrow') leftArrow: QueryList<ElementRef>;
-  @ViewChildren('rightArrow') rightArrow: QueryList<ElementRef>;
-
+  @ViewChild('#startHere', { static: false }) startHere: ElementRef;
+  
+  constructor(private render: Renderer2) {}
   ngOnInit() {
     gsap.registerPlugin(Draggable);
-    gsap.defaults({ ease: 'none', overwrite: "auto" });
   }
 
   ngAfterViewInit() {
+    gsap.defaults({ ease: 'none', overwrite: "auto" });
     this.init();
     this.createBaseTL();
   }
@@ -105,16 +103,20 @@ export class SliderComponent implements OnInit {
     });
     const tlm = gsap.timeline({ repeat: 1 })
       .to(ele, { duration: 1, x: `+=${this.wrapWidth}`/*, rotationX: -rotationX*/ }, 0)
-      .to(ele, { duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, borderBottom: "10px solid #FFC000" }, 0.5 - this.cellStep)
-    this.baseTL.add(tlm, index * -this.cellStep);
+      .to(ele, { duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, callbackScope: this, borderBottom: "10px solid #FFC000", onComplete: this.onUpdate, onStartParams: ["the green div has started to move"] }, 0.4)
+ 
+      this.baseTL.add(tlm, index * -this.cellStep);
   }
-
+  onUpdate() {
+    gsap.to('#startHere', { x:500,scale: 1 });
+    document.querySelector('#startHere').innerHTML = 'Start here';
+  }
   snapX(x): number {
     return Math.round(x / this.cellWidth) * this.cellWidth;
   }
 
   updateProgress() {
-    this.animation.progress(gsap.utils.wrap(0, 1, (this.draggable.x as number) / this.wrapWidth));
+       this.animation.progress(gsap.utils.wrap(0, 1, (this.draggable.x as number) / this.wrapWidth));
   }
   setProgess() {
     this.animation.progress(gsap.utils.wrap(0, 1, (gsap.getProperty(this.proxy, 'x') as number) / this.wrapWidth));

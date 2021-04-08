@@ -25,7 +25,7 @@ body {
 }
 
 .text-div {
-  margin-left: 239px;
+  margin-left: 542px;
   font-size: 32px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   height: 232px;
   /*  margin-top: 58px; */
   margin-right: 985px;
-  margin-bottom: 599px;
+  margin-bottom: 442px;
 }
 
 .cell {
@@ -42,7 +42,7 @@ body {
   top: 0;
   left: 0;
   /*  height: 284PX; */
-  width: 216PX;
+  width: 290PX !important;
   height: 374PX;
   font-size: 20px;
   font-family: sans-serif;
@@ -56,7 +56,7 @@ body {
   /*  margin-top: 265px; */
   border-radius: 16px;
   cursor: move;
-  box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 10px 21px 5px 1px rgba(0, 0, 0, 0.08);
 }
 
 .cell-content {
@@ -68,12 +68,13 @@ body {
   /*   display: flex; */
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100% !important;
   height: 100%;
   margin-top: 60px;
   /*  margin-right: 463px;
   margin-left: 364px; */
-  border: 2px solid green;
+  margin-right: 103px;
+/*   border: 2px solid green; */
 }
 
 .what-are-you {
@@ -109,8 +110,8 @@ body {
 
 }
 .prev-slide {
-  left: 401px;
-  margin-top: 600px;
+  left: 333px;
+  margin-top: 320px;
   background-color: #D6EAEC;
 }
 
@@ -120,8 +121,8 @@ body {
 
 .next-slide {
   height: 40px;
-  right: 399px;
-  margin-top: 600px;
+  right: 385px;
+  margin-top: 320px;
   background-color: #D6EAEC;
 }
 
@@ -134,31 +135,19 @@ body {
   cursor: pointer;
 }
 
-.large-cell {
-  top: 0;
-  left: 0;
-  height: 564PX;
-  width: 456px;
-  font-size: 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  user-select: none;
-  display: flex;
-  margin: 9px;
-  margin-top: 116px;
-  border-radius: 16px;
-  border-bottom: 10px solid #FFC000;
-  align-items: center;
-  justify-content: center;
-  background: #F5F5F5;
-  transform-origin: center bottom;
-}
-
 @media only screen and(min-width: 1023px) {}
 
-/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*  height: 284PX; */
+    width: 200px !important;
+  }
+
     .text-div {
-        margin-left: 41px;
+       /*  margin-left: 0px; */
         font-size: 15px;
     }
     .what-are-you {
@@ -202,4 +191,4 @@ body {
         margin-top: 523px;
 
     }
-} */
+}
