@@ -103,7 +103,7 @@ export class SliderComponent implements OnInit {
     });
     const tlm = gsap.timeline({ repeat: 1 })
       .to(ele, { duration: 1, x: `+=${this.wrapWidth}`/*, rotationX: -rotationX*/ }, 0)
-      .to(ele, { duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, callbackScope: this, borderBottom: "10px solid #FFC000", onComplete: this.onUpdate, onStartParams: ["the green div has started to move"] }, 0.4)
+      .to(ele, { duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, callbackScope: this, borderBottom: "10px solid #FFC000", /* onComplete: this.onUpdate, */ onStartParams: ["the green div has started to move"] }, 0.4)
  
       this.baseTL.add(tlm, index * -this.cellStep);
   }

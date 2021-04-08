@@ -68,12 +68,12 @@ body {
   /*   display: flex; */
   position: relative;
   overflow: hidden;
-  width: 100% !important;
+  width: 104% !important;
   height: 100%;
   margin-top: 60px;
   /*  margin-right: 463px;
   margin-left: 364px; */
-  margin-right: 103px;
+  margin-right: 74px;
 /*   border: 2px solid green; */
 }
 
