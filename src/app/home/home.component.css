@@ -45,6 +45,12 @@ main {
     width: 100%;
     margin-left: 8%;
   }
+  .flex-grid .col-light {
+    width: 52px;
+  }
+  .flex-grid .col-dark {
+    width: 15px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -61,14 +67,14 @@ main {
   }
 
   main {
-    width: 116%;
+    width: 100%;
   }
 
   .flex-grid .col-dark {
-    width: 14px;
+    width: 7px;
   }
 
   .flex-grid .col-light {
-    width: 50px;
+    width: 29px;
   }
 }

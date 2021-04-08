@@ -1,188 +1,219 @@
 .container {
-    height: 80px;
-    width: 100%;
-    background-color: white;
-    box-shadow: 1px 5px 1px -2px rgba(150, 150, 150, 0.8);
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 5px 1px -2px rgba(150, 150, 150, 0.8);
 }
 
 .container ul {
-    list-style-type: none;
-    margin: auto;
-    width: 70%;
-    display: flex;
+  list-style-type: none;
+  margin: auto;
+  width: 70%;
+  display: flex;
 }
 
 .container ul li {
-    /* margin-right: 20px; */
-    font-family: sans-serif;
-    font-weight: normal;
-    padding-top: 33px;
-    display: flex;
-    cursor: pointer;
+  /* margin-right: 20px; */
+  font-family: sans-serif;
+  font-weight: normal;
+  padding-top: 33px;
+  display: flex;
+  cursor: pointer;
 }
 
 .store {
-    margin-left: -7%;
+  margin-left: -7%;
 }
 
 .carousalCircle {
-    color: #f5c113;
-    font-size: 7px;
-    vertical-align: middle;
+  color: #f5c113;
+  font-size: 7px;
+  vertical-align: middle;
 }
 
 .personal-div {
-    position: relative;
-    left: 55%;
+  position: relative;
+  left: 55%;
 }
 
 .container ul .logo {
-    margin-right: 12%;
-    margin-left:  -14.5%;
-    padding-top: 0;
-    position: relative;
-    z-index: 1;
+  margin-right: 12%;
+  margin-left: -14.5%;
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .container ul .logo img {
-    position: relative;
-    width: 96px;
-    height: 96px;
-    top: 1px;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.08);
+  position: relative;
+  width: 96px;
+  height: 96px;
+  top: 1px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.08);
 }
 
 .products {
-    /* position: relative; */
-    margin-left: 2%;
+  /* position: relative; */
+  margin-left: 2%;
 }
 
 .help {
-    position: relative;
-    margin-left: 2%;
+  position: relative;
+  margin-left: 2%;
 }
 
 .search {
-    position: relative;
-    left: 50%;
+  position: relative;
+  left: 50%;
 }
 
 .container ul .search img {
-    position: relative;
-    width: 28px;
-    height: 23px;
-    margin-top: -1%;
+  position: relative;
+  width: 28px;
+  height: 23px;
+  margin-top: -1%;
 }
 
 .personal {
-    position: relative;
-    left: 38%;
+  position: relative;
+  left: 38%;
 }
 
 .headerBarWrapper .orange-strip {
-    position: relative;
-    background-color: #f5c113;
-    height: 8px;
-    width: 6%;
-    float: left;
-    margin-left: -1%;
+  position: relative;
+  background-color: #f5c113;
+  height: 8px;
+  width: 6%;
+  float: left;
+  margin-left: -1%;
 }
 
 .dot {
-    position: relative;
-    border-radius: 50%;
-    background-color: #FFC300;
-    width: 8px;
-    height: 8px;
-    margin-top: 5%;
+  position: relative;
+  border-radius: 50%;
+  background-color: #FFC300;
+  width: 8px;
+  height: 8px;
+  margin-top: 5%;
 }
 
 .select {
-    position: relative;
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: normal;
-    width: 93px;
-    border: none;
-    border-radius: 0px;
-    outline: 0px;
-    margin-left: 7%;
+  position: relative;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: normal;
+  width: 93px;
+  border: none;
+  border-radius: 0px;
+  outline: 0px;
+  margin-left: 7%;
 }
 
 .headerBarWrapper .black-strip {
-    position: relative;
-    background-color: black;
-    height: 8px;
-    width: 95%;
-    margin-left: 5%;
+  position: relative;
+  background-color: black;
+  height: 8px;
+  width: 95%;
+  margin-left: 5%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .container ul .logo {
-        margin-right: 16%;
-    }
-    .search {
-        margin-left: -7%;
-    }
-    .personal-div {
-        left: 38%;
-    }
-    .headerBarWrapper .black-strip {
-        width: 145%;
-    }
+  .container ul .logo {
+    margin-right: 16%;
+  }
+
+  .search {
+    left: 22%;
+  }
+
+  .personal-div {
+    left: 22%;
+  }
+
+  .headerBarWrapper .black-strip {
+    width: 96%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .container ul {
-        width: 100%;
-        padding: 0;
-    }
-    .container ul li {
-        /*    margin-right: 5px; */
-        font-size: 8px;
-    }
-    .logo {
-        width: 74px;
-        height: 82px;
-        top: 4px;
-    }
-    .container ul .logo {
-        margin-right: 8%;
-        margin-left: 0.2%;
-    }
-    .store{
-        margin-left: -3%;
-    }
 
-    .search {
-        left: 3%;
-        width: 28px;
-        height: 23px;
-    }
-    .search img {
-        width: 15px;
-        height: 13px;
-       }
-    .products .help {
-        margin-left: 1%;
-    }
-    .personal-div{
-        left: 0%;
-    }
-    .headerBarWrapper {
-        width: 63%;
-    }
-    .headerBarWrapper .black-strip {
-        width: 191%;
-    }
-    .select{
-        font-size: 7px;
-        width: 66px;
-        margin-left: 8%;
-    }
-    .dot{
-        width: 6px;
-        height: 6px;
-        margin-top: 2%;
-    }
+  .container ul {
+    width: 85%;
+    /*    padding: 0; */
+  }
+
+  .container ul li {
+    /*    margin-right: 5px; */
+    font-size: 8px;
+  }
+
+  .logo {
+    width: 74px;
+    height: 82px;
+    top: 4px;
+  }
+
+  .container ul li .logo {
+    margin-right: 8%;
+    margin-left: 0.2%;
+    width: 70px;
+    height: 73px;
+  }
+
+  .store {
+    margin-left: -11%;
+  }
+
+  .search {
+    width: 15px;
+    height: 14px;
+    margin-top: -4%;
+    left: 0%;
+  }
+
+  .container ul .search img {
+    width: 15px;
+    height: 13px;
+    margin-top: 88%;
+    margin-left: 8px;
+  }
+
+  .products .help {
+    margin-left: 1%;
+  }
+
+  .personal-div {
+    left: 4%;
+  }
+
+  .headerBarWrapper {
+    width: 61%;
+  }
+
+  .headerBarWrapper .black-strip {
+    width: 163%;
+  }
+
+  .select {
+    font-size: 7px;
+    width: 66px;
+    margin-left: 8%;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    margin-top: 2%;
+  }
+
+  .products {
+    margin-left: 1%;
+  }
+
+  .container ul .logo img {
+    width: 71px;
+    height: 71px;
+    margin-left: 8px;
+  }
+
 }

@@ -37,6 +37,7 @@ export class SliderComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    console.log("resize");
     gsap.defaults({ ease: 'none', overwrite: "auto" });
     this.init();
     this.createBaseTL();
@@ -131,7 +132,6 @@ export class SliderComponent implements OnInit {
       callbackScope: this,
       onUpdate: this.setProgess
     });
-  }
-
+  }  
 }
 
