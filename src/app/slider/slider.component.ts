@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { gsap, TimelineMax, TweenLite } from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 
@@ -26,18 +26,17 @@ export class SliderComponent implements OnInit {
   draggable: Draggable;
   picker: Element;
   slideAnimation: any;
+  newTitle: string;
 
   @ViewChild('container', { static: false }) container: ElementRef;
   @ViewChildren('cell') cell: QueryList<ElementRef>;
-  @ViewChild('#startHere', { static: false }) startHere: ElementRef;
-  
-  constructor(private render: Renderer2) {}
+
+  constructor(private render: Renderer2) { }
   ngOnInit() {
     gsap.registerPlugin(Draggable);
   }
 
   ngAfterViewInit() {
-    console.log("resize");
     gsap.defaults({ ease: 'none', overwrite: "auto" });
     this.init();
     this.createBaseTL();
@@ -102,28 +101,28 @@ export class SliderComponent implements OnInit {
       scale: 0.6,
       x: -this.cellWidth
     });
+
     const tlm = gsap.timeline({ repeat: 1 })
-      .to(ele, { duration: 1, x: `+=${this.wrapWidth}`/*, rotationX: -rotationX*/ }, 0)
-      .to(ele, { duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, callbackScope: this, borderBottom: "10px solid #FFC000", /* onComplete: this.onUpdate, */ onStartParams: ["the green div has started to move"] }, 0.4)
- 
-      this.baseTL.add(tlm, index * -this.cellStep);
+      .to(ele, { duration: 1, x: `+=${this.wrapWidth}` }, 0)
+      .to(ele, {
+        duration: this.cellStep, scale: 1, repeat: 1, yoyo: true, y: '60px',
+        callbackScope: this, borderBottom: "9px solid #FFC000", fontWeight: 600
+      }, 0.4);
+
+    this.baseTL.add(tlm, index * -this.cellStep);
   }
-  onUpdate() {
-    gsap.to('#startHere', { x:500,scale: 1 });
-    document.querySelector('#startHere').innerHTML = 'Start here';
-  }
+
   snapX(x): number {
     return Math.round(x / this.cellWidth) * this.cellWidth;
   }
 
   updateProgress() {
-       this.animation.progress(gsap.utils.wrap(0, 1, (this.draggable.x as number) / this.wrapWidth));
+    this.animation.progress(gsap.utils.wrap(0, 1, (this.draggable.x as number) / this.wrapWidth));
   }
   setProgess() {
     this.animation.progress(gsap.utils.wrap(0, 1, (gsap.getProperty(this.proxy, 'x') as number) / this.wrapWidth));
   }
   animateSlides(direction: number, event: Event) {
-
     var x = this.snapX((gsap.getProperty(this.proxy, 'x') as number) + direction * this.cellWidth);
     this.slideAnimation.kill();
     this.slideAnimation = gsap.to(this.proxy, {
@@ -132,6 +131,7 @@ export class SliderComponent implements OnInit {
       callbackScope: this,
       onUpdate: this.setProgess
     });
-  }  
+
+  }
 }
 

@@ -1,0 +1,11 @@
+<div class="text" *ngIf="newTitleArr.length==2">
+  <p style='margin-bottom: -10%;'>{{newTitleArr[0]}}</p>
+  <p style='margin-left: -4px;'> {{newTitleArr[1]}}</p>
+</div>
+<div class="text" *ngIf="newTitleArr.length>2">
+  <p style='margin-bottom: -10%;'>{{newTitleArr[0]}}&nbsp;{{newTitleArr[1]}}</p>
+  <p style='margin-left: -5px;'>{{newTitleArr[2]}}</p>
+</div>
+<div class="text" *ngIf="newTitleArr.length==1">
+  <p style='margin-bottom: 26px; margin-left: -3px'>{{newTitleArr[0]}}</p>
+</div>

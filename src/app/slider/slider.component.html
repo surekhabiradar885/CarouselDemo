@@ -7,12 +7,11 @@
     <ng-container *ngFor="let action of actions; let i = index">
       <div #cell class="cell">
         <img class="small-box" src="./assets/smallSquare.PNG" />
-        <div id="text" class="text">{{action}}
-          <!-- <div style='position: absolute;' id="startHere"></div> -->
-        </div>
+              <app-text-split title={{action}}></app-text-split>
       </div>
     </ng-container>
   </div>
-  <img  class="prev-slide control" src="./assets/previous3.PNG" (click)="animateSlides(-1,$event)" />
-  <img  class="next-slide control" src="./assets/next2.PNG" (click)="animateSlides(1,$event)" />
+  <div class="startHere w3-animate-zoom" id="startHere">START HERE > </div>
+  <img class="prev-slide control" src="./assets/previous3.PNG" (click)="animateSlides(-1,$event)" />
+  <img class="next-slide control" src="./assets/next2.PNG" (click)="animateSlides(1,$event)" />
 </div>
